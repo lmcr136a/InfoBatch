@@ -29,7 +29,7 @@ To replicate the experiment in the paper, I conducted experiments with the follo
 
 For the CIFAR-100 / ResNet-50 experiments, the results of the InfoBatch can be found in Figure 3 -(a) in the paper. I conducted the experiment using the optimal parameter proposed by the paper, 𝑟=50, and my result was similar to the accuracy of approximately 81 reported in the figure. While the accuracy of the baseline and InfoBatch are similar, InfoBatch reduced the number of samples and the time required for the experiment.
 
-For experiments with ResNet-18, Table 1 shows the accuracy of InfoBatch, 95.1% and 78.1%, with CIFAR-10 and CIFAR-100 respectively. I also used 𝑟=50, and my results were similar to the accuracy reported in the table. 
+For experiments with ResNet-18, Table 1 in the paper shows the accuracy of InfoBatch, 95.1% and 78.1%, with CIFAR-10 and CIFAR-100 respectively. I also used 𝑟=50, and my results were similar to the accuracy reported in the table above.
 
 ### To execute each experiment, run the following code in the terminal.
 
