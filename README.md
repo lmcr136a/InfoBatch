@@ -16,7 +16,7 @@ pip install -e .
 
 ## Experiments
 
-To replicate the experiment in the paper, I conducted experiments with the following setup, and the summary of the results is provided below.
+To replicate the experiment in the paper, I conducted experiments with the following setup. Additionally, I conducted full batch experiments using the same configurations to compare the accuracy and running time with the baseline. The summary of the results is provided below.
 
 | Dataset   | Model     | Batch                   | Test Acc | Total Training Time  | Total saved sample forwarding  |
 |-----------|-----------|-------------------------|----------|----------------------|--------------------------------|
