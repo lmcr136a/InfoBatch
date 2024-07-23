@@ -16,11 +16,11 @@ pip install -e .
 
 ## Experiments
 
-To replicate the experiment in the paper, I conducted experiments with the following setup. Additionally, I conducted full batch experiments using the same configurations to compare the accuracy and running time with the baseline. The summary of the results is provided below.
+To replicate the experiment in the paper, I conducted experiments with the following setup. Additionally, I conducted full batch experiments using the same configurations to compare the accuracy and running time with the baseline. I followed the default training configuration in the appendix of the paper, and the summary of the results is provided below.
 
 | Dataset   | Model     | Batch                   | Test Acc | Total Training Time  | Total saved sample forwarding  |
 |-----------|-----------|-------------------------|----------|----------------------|--------------------------------|
-| CIFAR-100 | ResNet-50 | Full Batch (Baseline)   |  81.1%   |  7hour 22min         |      0                         |
+| CIFAR-100 | ResNet-50 | Full Batch (Baseline)   |  81.3%   |  7hour 22min         |      0                         |
 | CIFAR-100 | ResNet-50 | InfoBatch               |  80.9%   |  5hour 32min         |      3085267                   |
 | CIFAR-100 | ResNet-18 | Full Batch (Baseline)   |  81.1%   |  7hour 22min         |      0                         |
 | CIFAR-100 | ResNet-18 | InfoBatch               |  80.9%   |  5hour 32min         |      3085267                   |
@@ -39,26 +39,26 @@ In this work, I have verified the results of several experiments presented in th
 To run the CIFAR-100 / ResNet-50 experiment:
 ```bash
 # Full Batch (Baseline)
-python3 examples/cifar_example.py --model r50 --optimizer lars --max-lr 5.2 --delta 0.0
+python3 examples/cifar_example.py --model r50 --batch-size 256 --optimizer lars --max-lr 5.2 --delta 0.0
 
 # InfoBatch
-python3 examples/cifar_example.py --model r50 --optimizer lars --max-lr 5.2 --delta 0.875 --ratio 0.5 --use_info_batch
+python3 examples/cifar_example.py --model r50 --batch-size 256 --optimizer lars --max-lr 5.2 --delta 0.875 --ratio 0.5 --use_info_batch
 ```
 
 To run the CIFAR-100 / ResNet-18 experiment:
 ```bash
 # Full Batch (Baseline)
-python3 examples/cifar_example.py --model r18 --optimizer lars --max-lr 5.2 --delta 0.0
+python3 examples/cifar_example.py --model r18 --optimizer sgd --max-lr 0.03 --delta 0.0
 
 # InfoBatch
-python3 examples/cifar_example.py --model r18 --optimizer lars --max-lr 5.2 --delta 0.875 --ratio 0.5 --use_info_batch
+python3 examples/cifar_example.py --model r18 --optimizer sgd --lr 0.05 --max-lr 0.03 --delta 0.875 --ratio 0.5 --use_info_batch
 ```
 
 To run the CIFAR-10 / ResNet-18 experiment:
 ```bash
 # Full Batch (Baseline)
-python3 examples/cifar_example_cifar10.py --model r18 --optimizer lars --max-lr 5.2 --delta 0.0
+python3 examples/cifar_example_cifar10.py --model r18 --optimizer lars --max-lr 2.3 --delta 0.0
 
 # InfoBatch
-python3 examples/cifar_example_cifar10.py --model r18 --optimizer lars --max-lr 5.2 --delta 0.875 --ratio 0.5 --use_info_batch
+python3 examples/cifar_example_cifar10.py --model r18 --optimizer lars --max-lr 2.3 --delta 0.875 --ratio 0.5 --use_info_batch
 ```
