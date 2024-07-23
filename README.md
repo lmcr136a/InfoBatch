@@ -32,7 +32,7 @@ For the CIFAR-100 / ResNet-50 experiments, the results of the InfoBatch can be f
 For experiments with ResNet-18, Table 1 in the paper shows the accuracy of InfoBatch, 95.1% and 78.1%, with CIFAR-10 and CIFAR-100 respectively. I also used 𝑟=50, and my results were similar to the accuracy reported in the table above.
 
 
-In this way, I directly verified the results of several experiments presented in the paper. My experimental results showed little to no difference compared to those in the paper. Additionally, I conducted baseline experiments for each case to compare the accuracy and running time, which were not explicitly detailed in the paper. With more sufficient hardware resources and time, I would have experimented with a wider range of 𝑟 values and with the ImageNet dataset to compare their accuracies with those reported in the paper.
+In this work, I have verified the results of several experiments presented in the paper. My experimental results showed little to no difference compared to those in the paper. Additionally, I conducted baseline experiments for each case to compare the accuracy and running time, which were not explicitly detailed in the paper. With more sufficient hardware resources and time, I would have experimented with a wider range of 𝑟 values and with the ImageNet dataset to compare their accuracies with those reported in the paper.
 
 ### To execute each experiment, run the following code in the terminal.
 
