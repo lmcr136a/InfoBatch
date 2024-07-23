@@ -22,9 +22,9 @@ To replicate the experiment in the paper, I conducted experiments with the follo
 |-----------|-----------|-------------------------|----------|----------------------|--------------------------------|
 | CIFAR-100 | ResNet-50 | Full Batch (Baseline)   |  81.3%   |  7hours 22minutes         |      0                         |
 | CIFAR-100 | ResNet-50 | InfoBatch               |  80.9%   |  5hours 32minutes         |      3085267                   |
-| CIFAR-100 | ResNet-18 | Full Batch (Baseline)   |  80.26%   |  5hours 42minutes         |      0                         |
+| CIFAR-100 | ResNet-18 | Full Batch (Baseline)   |  80.3%   |  5hours 42minutes         |      0                         |
 | CIFAR-100 | ResNet-18 | InfoBatch               |  79.1%   |  4hours 18minutes         |      3115353                   |
-| CIFAR-10  | ResNet-18 | Full Batch (Baseline)   |  95.49%   |  5hours 39minutes         |      0                         |
+| CIFAR-10  | ResNet-18 | Full Batch (Baseline)   |  95.5%   |  5hours 39minutes         |      0                         |
 | CIFAR-10  | ResNet-18 | InfoBatch               |  95.1%   |  4hours 4minutes         |      3661638                   |
 
 For the CIFAR-100 / ResNet-50 experiments, the results of the InfoBatch can be found in Figure 3 -(a) in the paper. I conducted the experiment using the optimal parameter proposed by the paper, 𝑟=50, and my result was similar to the accuracy of approximately 81 reported in the figure. While the accuracy of the baseline and InfoBatch are similar, InfoBatch reduced the number of samples and the time required for the experiment.
